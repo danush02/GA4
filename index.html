@@ -57,6 +57,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
+    <!-- The Modal -->
+    <div id="policyModal" class="modal">
+    <!-- Modal Content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Privacy Policy</h2>
+            <iframe src="Policy Document.pdf" width="100%" height="400px"></iframe>
+        </div>
+    </div>
+
     <nav id="nav">
         <div class="navTop">
             <div class="navItem">
@@ -71,6 +81,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             </div>
             <div class="navItem">
                 <span class="limitedOffer">Limited Offer!</span>
+            </div>
+            <!-- Trigger the Modal -->
+            <a href="#!" id="policyLink">View Privacy Policy</a>
+            <!-- The Modal -->
+            <div id="policyModal" class="modal">
+            <!-- Modal Content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Privacy Policy</h2>
+                    <iframe src="Policy Document.pdf" width="100%" height="400px"></iframe>
+                </div>
             </div>
         </div>
         <div class="navBottom">
@@ -196,6 +217,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <span class="close">X</span>
         </div>
     </div>
+    <div class="product_video">
+        <iframe class="yt_video" src="https://www.youtube.com/embed/hmYQBikVwK8?si=38abfTftN699TVWn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <div class="gallery">
         <div class="galleryItem">
             <h1 class="galleryTitle">Be Yourself!</h1>
@@ -231,6 +255,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 alt="" class="nsImg">
         </div>
     </div>
+    <form action="/submit-feedback" method="POST" class="feedback-form">
+        <h2>We Value Your Feedback!</h2>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Your Email">
+        
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+            <option value="" disabled selected>Select a Rating</option>
+            <option value="5">Excellent</option>
+            <option value="4">Very Good</option>
+            <option value="3">Good</option>
+            <option value="2">Fair</option>
+            <option value="1">Poor</option>
+        </select>
+        
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Your feedback here..."></textarea>
+        
+        <input type="submit" value="Submit Feedback">
+    </form>    
     <footer>
         <div class="footerLeft">
             <div class="footerMenu">
@@ -288,6 +336,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </footer>
     <script src="./app.js"></script>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/cnhYPXaCpf0?si=CpPZBS3YouBKppvH"></iframe>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("policyModal");
+
+        // Get the link that opens the modal
+        var link = document.getElementById("policyLink");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the link, open the modal
+        link.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 
 </html>
