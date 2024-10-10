@@ -41,7 +41,61 @@ document.getElementById("select-item").addEventListener("click", function() {
 });
 </script>
 
+    <!-- View Items-->
+<button id="view-item">View Item Details</button>
+<script>
+document.getElementById("view-item").addEventListener("click", function() {
+    gtag('event', 'view_item', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics',
+        'price': 499.99
+    });
+});
+</script>
 
+    <!-- Add to cart -->
+<button id="add-to-cart">Add to Cart</button>
+<script>
+document.getElementById("add-to-cart").addEventListener("click", function() {
+    gtag('event', 'add_to_cart', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics',
+        'price': 499.99,
+        'quantity': 1
+    });
+});
+</script>
+    
+    <!-- Remove from cart-->
+<button id="remove-from-cart">Remove from Cart</button>
+<script>
+document.getElementById("remove-from-cart").addEventListener("click", function() {
+    gtag('event', 'remove_from_cart', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics'
+    });
+});
+</script>
+
+    <!-- Start Checkout-->
+<button id="start-checkout">Start Checkout</button>
+<script>
+document.getElementById("start-checkout").addEventListener("click", function() {
+    gtag('event', 'start_checkout', {
+        'items': [{
+            'item_id': 'item_001',
+            'item_name': 'Sample Smartphone',
+            'category': 'Electronics',
+            'price': 499.99,
+            'quantity': 1
+        }]
+    });
+});
+</script>
+        
 </head>
 
 <body>
